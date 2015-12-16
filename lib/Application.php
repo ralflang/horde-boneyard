@@ -48,6 +48,14 @@ class Boneyard_Application extends Horde_Registry_Application
     public $version = 'H5 (0.1-git)';
 
     /**
+     *  Advertise the dynamicView capability to the framework
+     */
+    public $features = array(
+        'dynamicView' => true
+    );
+
+
+    /**
      */
     protected function _bootstrap()
     {
@@ -81,7 +89,8 @@ class Boneyard_Application extends Horde_Registry_Application
 
     /**
      * Adds additional items to the sidebar.
-     *
+     * This is only for traditional/static view.
+     * For dynamic view, see Boneyard_View_Sidebar.php and templates/dynamic/sidebar.html.php
      * @param Horde_View_Sidebar $sidebar  The sidebar object.
      */
     public function sidebar($sidebar)
