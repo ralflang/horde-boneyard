@@ -1,0 +1,1 @@
+<?php define('HORDE_BASE', '/srv/www/vhosts.d/horde.ralf-lang.de');
